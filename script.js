@@ -1,31 +1,31 @@
+function calculate(){
 
-
-  calculate = () => {
+    let price = Number(document.getElementById("price").value);
 
     let price = Number(document.getElementById("cost").value);
 
-    const education = Number(document.getElementById("education").value);
+    var education = Number(document.getElementById("education").value);
     price *= education;
-    console.log(price);
+    console.log('1',price);
     
 
-    const networth = Number(document.getElementById("networth").value);
+    var networth = Number(document.getElementById("networth").value);
     price *= networth;
-    console.log(price);
+    console.log('2',price);
 
-    const caste = Number(document.getElementById("caste").value);
+    var caste = Number(document.getElementById("caste").value);
     price += caste;
-    console.log(price);
+    console.log('3',price);
 
-    const skills = Number(document.getElementsByClassName("myCheck").value);
+    var skills = Number(document.getElementsByClassName("myCheck").value);
     price += skills;
-    console.log(price);
+    console.log('4',price);
 
-    const age = Number(document.getElementById("myAge").value);
+    var age = Number(document.getElementById("myAge").value);
     price *= age;
-    console.log(price);
+    console.log('5',price);
 
-    const reputation = Number(document.getElementsByClassName("myReputation"));
+    var reputation = Number(document.getElementsByClassName("myReputation"));
     price = getCheckboxValuesForLoop(reputation, price);
     const getCheckboxValuesForLoop = (html_collection, price) => {
         for (let i = 0; i < html_collection.length; i++) {
@@ -36,8 +36,8 @@
         return price;
     }
 
-    const text = document.getElementById("text");
+    //const text = document.getElementById("text");
 
-    document.getElementById("submit").innerHTML = `The price for your bride is ${price}.`;
+    //document.getElementById("submit").innerHTML = `The price for your bride is ${price}.`;
     console.log(price);
 }
